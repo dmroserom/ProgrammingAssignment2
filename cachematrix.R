@@ -1,7 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
+## In this file are two function that are used to create a special object that stores a numeric vector and cache's its mean.
 
-## Write a short comment describing this function
+
+##The first function calls makeCacheMatrix. This function creates a special "matrix" object that can cache its inverse
 
 makeCacheMatrix <- function(x = matrix()){
   inv <- NULL
@@ -16,8 +16,7 @@ makeCacheMatrix <- function(x = matrix()){
 }
 
 
-## Write a short comment describing this function
-
+##The second function computes the inverse of the special "matrix" returned by makeCacheMatrix above. If the inverse has already been calculated (and the matrix has not changed), then the cachesolve should retrieve the inverse from the cache.
 cacheSolve <- function(x, ...){
   inv <- x$getInverse()
   if(!is.null(inv)){
